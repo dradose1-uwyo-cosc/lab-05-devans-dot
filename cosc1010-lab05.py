@@ -1,8 +1,8 @@
-# Your Name Here
+# Dominick Evans
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
+# 10/10/24
+# Lab 03
+# Lab Section: 12
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -95,6 +95,14 @@ min_temps = [
 # The use of len() is fine
 # You can do this in two individual loops, or a single loop if you wish 
 
+max_temp = 0
+for x in max_temps:
+    if x > max_temp:
+        max_temp = x
+min_temp = 0
+for x in min_temps:
+    if x < min_temp:
+        min_temp = x
 print(f"Max temp = {max_temp}")
 print(f"Min temp = {min_temp}")
 
@@ -104,11 +112,31 @@ numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, 
 # You should print the number and the result within an f-string 
 # Example output: 83 is positive
 
-print(f'There are {pos_count} positive numbers')
-print(f'There are {neg_count} negative numbers')
-print(f"Zero occurred {zero_count} time(s)")
+postive = 0
+negative = 0
+zeroes = 0
+for x in numbers:
+    if x > 0:
+     postive += 1
+    elif x == 0:
+     zeroes += 1
+    else:
+     negative += 1
+print(f"There are {postive} positive numbers.")
+print(f"There are {negative} negative numbers.")
+print(f"There are {zeroes} zeroes.")
+
 # Given the same numbers list, give the sum of all positive numbers, and the sum of all negative numbers
 # This should be done within a single loop
-
-print(f"Sum of positive numbers {pos_sum}")
-print(f"Sum of negative numbers {neg_sum}")
+sumpos = 0
+sumneg = 0
+zeroes = 0
+for x in numbers:
+    if x > 0:
+        sumpos = sumpos + x
+    elif x < 0:
+        sumneg = sumneg + x
+    else:
+        zeroes += 1
+print(f"Sum of positive numbers {sumpos}")
+print(f"Sum of negative numbers {sumneg}")
